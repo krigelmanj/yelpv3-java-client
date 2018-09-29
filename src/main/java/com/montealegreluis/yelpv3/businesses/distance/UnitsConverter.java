@@ -6,9 +6,7 @@ package com.montealegreluis.yelpv3.businesses.distance;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.montealegreluis.yelpv3.businesses.distance.UnitOfLength.KILOMETERS;
-import static com.montealegreluis.yelpv3.businesses.distance.UnitOfLength.METERS;
-import static com.montealegreluis.yelpv3.businesses.distance.UnitOfLength.MILES;
+import static com.montealegreluis.yelpv3.businesses.distance.UnitOfLength.*;
 
 /**
  * Converts values between <code>UnitOfLength</code>s. For instance
