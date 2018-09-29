@@ -34,17 +34,17 @@ public class Yelp {
     }
 
     public SearchResponse search(SearchCriteria criteria) {
-        yelpClient.allBusinessesMatching(criteria, token().accessToken());
+        yelpClient.allBusinessesMatching(criteria);
         return SearchResponse.fromOriginalResponse(yelpClient.responseBody());
     }
 
     public BusinessResponse searchById(String id) {
-        yelpClient.businessWith(id, token().accessToken());
+        yelpClient.businessWith(id);
         return BusinessResponse.fromOriginalResponse(yelpClient.responseBody());
     }
 
     public ReviewsResponse reviews(String id) {
-        yelpClient.allReviewsFor(id, token().accessToken());
+        yelpClient.allReviewsFor(id);
         return ReviewsResponse.fromOriginalResponse(yelpClient.responseBody());
     }
 

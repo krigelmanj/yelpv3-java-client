@@ -35,18 +35,18 @@ public class ApacheHttpClient implements YelpClient {
     }
 
     @Override
-    public void allBusinessesMatching(SearchCriteria criteria, String accessToken) {
-        getFrom(yelpURIs.searchBy(criteria), accessToken);
+    public void allBusinessesMatching(SearchCriteria criteria) {
+        getFrom(yelpURIs.searchBy(criteria));
     }
 
     @Override
-    public void businessWith(String id, String accessToken) {
-        getFrom(yelpURIs.businessBy(id), accessToken);
+    public void businessWith(String id) {
+        getFrom(yelpURIs.businessBy(id));
     }
 
     @Override
-    public void allReviewsFor(String businessId, String accessToken) {
-        getFrom(yelpURIs.reviews(businessId), accessToken);
+    public void allReviewsFor(String businessId) {
+        getFrom(yelpURIs.reviews(businessId));
     }
 
     @Override
@@ -66,9 +66,15 @@ public class ApacheHttpClient implements YelpClient {
         checkStatus(uri);
     }
 
-    private void getFrom(URI uri, String bearerToken) {
+/*    private void getFrom(URI uri, String bearerToken) {
         HttpGet get = new HttpGet(uri);
         get.setHeader("Authorization", String.format("Bearer %s", bearerToken));
+        response = executeRequest(get);
+        checkStatus(uri);
+    } */
+    private void getFrom(URI uri) {
+        HttpGet get = new HttpGet(uri);
+        get.setHeader("Authorization", String.format("Bearer GJM3ct05cXXX0WjMcRN1LLxz5kOJAHs0pTD6Eu0Yu3yChpUFijugH_OF7WFzbxeF09TKcbYvRuYDNU9PCmoBcF2ohwG-c9sqTgZ0_jGGCJP4KENg6Tl8TbtnPQiuW3Yx"));
         response = executeRequest(get);
         checkStatus(uri);
     }

@@ -18,11 +18,11 @@ import java.util.Map;
  * </ul>
  */
 public interface YelpClient {
-    void allBusinessesMatching(SearchCriteria criteria, String accessToken);
+    void allBusinessesMatching(SearchCriteria criteria);
 
-    void businessWith(String id, String accessToken);
+    void businessWith(String id);
 
-    void allReviewsFor(String businessId, String accessToken);
+    void allReviewsFor(String businessId);
 
     void authenticate(Map<String, String> credentials);
 
