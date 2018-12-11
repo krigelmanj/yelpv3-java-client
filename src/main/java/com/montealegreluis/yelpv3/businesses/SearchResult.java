@@ -36,7 +36,7 @@ public class SearchResult {
      *             ;
      *         }
      *
-     *         private Map<String, Object> businessToMap(Business business) {
+     *         private Map<String, Object> businessT oMap(Business business) {
      *             Map<String, Object> businessInformation = new HashMap<>();
      *             businessInformation.put("id", business.id);
      *             businessInformation.put("name", business.name);

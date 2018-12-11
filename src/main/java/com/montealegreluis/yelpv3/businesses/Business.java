@@ -11,19 +11,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Business {
-    public final double rating;
-    public final PricingLevel pricingLevel;
-    public final String phone;
-    public final String id;
-    public final boolean isClosedPermanently;
-    public final Categories categories;
-    public final int reviewCount;
-    public final String name;
-    public final URL url;
-    public final Coordinates coordinates;
-    public final URL image;
-    public final Location location;
-    public final Distance distance;
+    public double rating;
+    public PricingLevel pricingLevel;
+    public String phone;
+    public String id;
+    public boolean isClosedPermanently;
+    public Categories categories;
+    public int reviewCount;
+    public String name;
+    public URL url;
+    public Coordinates coordinates;
+    public URL image;
+    public Location location;
+    public Distance distance;
     public final List<Transaction> transactions;
 
     public Business(
@@ -56,6 +56,11 @@ public class Business {
         this.location = location;
         this.distance = distance;
         this.transactions = Collections.unmodifiableList(transactions);
+    }
+
+    public Business() {
+
+        transactions = null;
     }
 
     public boolean isInCity(String city) {

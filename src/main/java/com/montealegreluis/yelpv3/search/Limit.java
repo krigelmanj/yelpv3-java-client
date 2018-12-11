@@ -7,6 +7,10 @@ public class Limit {
     static final int MAX_LIMIT = 50;
     private int value;
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public static Limit of(int value) {
         return new Limit(value);
     }

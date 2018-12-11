@@ -12,7 +12,7 @@ import java.util.Locale;
 import java.util.Map;
 
 public class SearchCriteria {
-    private final int defaultPageSize = 20;
+    private final int defaultPageSize = 50;
     private Map<String, String> parameters = new HashMap<>();
 
     /**
